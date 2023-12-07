@@ -1,4 +1,5 @@
 import { useState,useEffect } from 'react'
+import Hero from './Components/Hero';
 
 function App() {
   
@@ -30,9 +31,10 @@ function App() {
   console.log(theme)
 
   return (
-    <div className='h-screen bg-gray-200 dark:bg-gray-950 transition-all duration-500'>
+    <div className='h-screen bg-gray-200 dark:bg-gray-950 transition-all duration-300'>
       <h1 className='text-center'>Hello</h1>
-      <button className="border-l-neutral-800 bg-red-700 rounded-full p-2 flex justify-center m-auto" onClick={handleClick}> darkmode</button>
+      <button className="border-l-neutral-800 bg-red-700 rounded-full p-2 flex justify-center m-auto animate-pulse" onClick={handleClick}> darkmode</button>
+      <Hero />
     </div>
   )
 }
