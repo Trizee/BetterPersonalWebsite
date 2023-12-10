@@ -4,7 +4,6 @@ import { SlSocialGoogle } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 import { IoLogoGithub } from "react-icons/io";
 
-
 export default function Hero({theme}){
     
     const [loaded, setLoaded] = useState(false);
@@ -62,24 +61,27 @@ export default function Hero({theme}){
     },[theme])
 
     return(
-        <div className="relative h-screen">
-            <div className= {loaded ? "opacity-100 transition-all duration-1000 w-full" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-700 hero:scale-700">HELLO  I'M</p>
+        <div className="p-5 md:p-20 h-screen flex flex-col">
+            <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <p className="text-6xl md:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-700 hero:scale-700">HELLO  I'M</p>
             </div>
-            <div className= {loaded1 ? "opacity-100 transition-all duration-1000" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500">TRI HOANG</p>
+            <div className= {loaded1 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <p className="text-6xl md:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500">TRI HOANG</p>
             </div>
-            <div className= {loaded2 ? "opacity-100 transition-all duration-1000" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300">SOFTWARE</p>
+            <div className= {loaded2 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <p className="text-6xl md:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300">SOFTWARE</p>
             </div>
-            <div className= {loaded3 ? "opacity-100 transition-all duration-1000" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300">ENGINEER</p>
+            <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <p className="text-6xl md:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300">ENGINEER</p>
             </div>
-            <div className={loaded4 ? "transition-all duration-1000 gap-8 absolute bottom-0" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
-                <div className="inline-block p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialInstagram style={style} size="3rem"/> </div> 
-                <div className="inline-block p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialLinkedin style={style} size="3rem"/> </div> 
-                <div className="inline-block p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <IoLogoGithub style={style} size="3rem"/> </div>
-                <div className="inline-block p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialGoogle style={style} size="3rem"/> </div> 
+            <button class="bg-transparent hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-l-4 border-blue-700 hover:border-blue-500 ">
+                Button
+            </button>
+            <div className={loaded4 ? "transition-all duration-1000 gap-8 flex mt-auto justify-center pb-3 md:justify-normal" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
+                <div className="inline-block p-1 md:p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialInstagram style={style} size="3rem"/> </div> 
+                <div className="inline-block p-1 md:p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialLinkedin style={style} size="3rem"/> </div> 
+                <div className="inline-block p-1 md:p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <IoLogoGithub style={style} size="3rem"/> </div>
+                <div className="inline-block p-1 md:p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialGoogle style={style} size="3rem"/> </div> 
             </div>
         </div>
     )
