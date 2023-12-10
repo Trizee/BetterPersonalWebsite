@@ -3,6 +3,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { SlSocialGoogle } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 import { IoLogoGithub } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero({theme}){
     
@@ -43,7 +44,7 @@ export default function Hero({theme}){
     useEffect(()=>{
         const timer = setTimeout(() => {
             setLoaded4(true);
-          }, 2250);
+          }, 2500);
           return () => clearTimeout(timer)
     },[])
 
@@ -60,6 +61,8 @@ export default function Hero({theme}){
         }
     },[theme])
 
+    const arrowStyle = {margin:"auto" }
+
     return(
         <div className="p-5 md:p-20 h-screen flex flex-col">
             <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
@@ -74,9 +77,11 @@ export default function Hero({theme}){
             <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
                 <p className="text-6xl md:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300">ENGINEER</p>
             </div>
-            <button class="bg-transparent hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-l-4 border-blue-700 hover:border-blue-500 ">
-                Button
+            <div className={loaded4? "my-auto transition-all duration-1000" : "opacity-0"}>
+            <button class="bg-gray-200 hover:bg-transparent hover:text-gray-200 transition-all duration-75 text-gray-800 font-bold py-2 px-3 ml-3 hover:border-2 border-gray-700 hover:border-gray-500 flex gap-3">
+                Let's Connect <FaArrowRight size={"1rem"} style={arrowStyle}/>
             </button>
+            </div>
             <div className={loaded4 ? "transition-all duration-1000 gap-8 flex mt-auto justify-center pb-3 md:justify-normal" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
                 <div className="inline-block p-1 md:p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialInstagram style={style} size="3rem"/> </div> 
                 <div className="inline-block p-1 md:p-7 rounded-full hover:scale-110 transition-all duration-75 cursor-pointer"> <SlSocialLinkedin style={style} size="3rem"/> </div> 
