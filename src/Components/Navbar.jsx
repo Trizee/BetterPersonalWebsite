@@ -18,7 +18,7 @@ export default function NavBar({theme,setTheme}){
 
     return (
         <>
-        <div className="transition-all duration-1000 w-screen flex justify-end">
+        <div className="transition-all duration-1000 flex justify-end">
             {theme === "dark" ? <MdLightMode style={style} size="2rem" onClick={()=>{setTheme("light")}} /> : <MdDarkMode style={style} size="2rem" onClick={()=>{setTheme("dark")}}/>}
         </div>
         </>

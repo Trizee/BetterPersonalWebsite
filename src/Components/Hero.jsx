@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import { SlSocialLinkedin } from "react-icons/sl";
-import { SlSocialGoogle } from "react-icons/sl";
+import { MdEmail } from "react-icons/md";
 import { SlSocialInstagram } from "react-icons/sl";
 import { IoLogoGithub } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
@@ -88,7 +88,7 @@ export default function Hero({theme}){
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialInstagram style={style} size="3rem"/> </div> 
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialLinkedin style={style} size="3rem"/> </div> 
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <IoLogoGithub style={style} size="3rem"/> </div>
-                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialGoogle style={style} size="3rem"/> </div> 
+                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <MdEmail style={style} size="3rem"/> </div> 
             </div>
         </div>
     )
