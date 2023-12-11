@@ -34,7 +34,7 @@ function App() {
   return (
     <div className='h-screen bg-gray-200 dark:bg-gray-950 transition-all duration-1000 grid grid-cols-6 grid-flow-col'>
       {/* <button className="border-l-neutral-800 bg-red-700 rounded-full p-2 flex justify-center m-auto animate-pulse" onClick={handleClick}> darkmode</button> */}
-      <NavBar />
+      <NavBar theme={theme} setTheme={setTheme}/>
       <div className='col-span-6 md:col-span-2'>
         <Hero theme={theme} />
       </div>

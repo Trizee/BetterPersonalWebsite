@@ -49,7 +49,7 @@ export default function Hero({theme}){
     },[])
 
     // Making styling for the react-icons
-    const [style,setStyle] = useState({ color: "#e5e7eb", })
+    const [style,setStyle] = useState({})
 
     // setting theme for icons 
 
@@ -64,25 +64,27 @@ export default function Hero({theme}){
     const arrowStyle = {margin:"auto" }
 
     return(
-        <div className="p-5 md:p-16 h-screen flex flex-col">
-            <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-700 tracking-tight">HELLO  I'M</p>
-            </div>
-            <div className= {loaded1 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500 tracking-tight">TRI HOANG</p>
-            </div>
-            <div className= {loaded2 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">SOFTWARE</p>
-            </div>
-            <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
-                <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">ENGINEER</p>
-            </div>
+        <div className="p-5 md:p-12 h-screen flex flex-col">
+            <div>
+                <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-700 tracking-tight">HELLO  I'M</p>
+                </div>
+                <div className= {loaded1 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500 tracking-tight">TRI HOANG</p>
+                </div>
+                <div className= {loaded2 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">SOFTWARE</p>
+                </div>
+                <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">ENGINEER</p>
+                </div>
+                </div>
             <div className={loaded4? "m-auto flex justify-center transition-all duration-1000 " : "opacity-0"}>
-            <button class="bg-transparent hover:bg-gray-200 hover:text-gray-800 transition-all duration-200 text-gray-200 font-bold py-2 px-3 border-2 hover:border-transparent border-gray-400 flex gap-3 rounded-lg">
-                Let's Connect <FaArrowRight size={"1rem"} style={arrowStyle}/>
-            </button>
+                <button class="bg-transparent hover:bg-gray-800 dark:hover:bg-gray-200 dark:hover:text-gray-800 hover:text-gray-200 dark:text-gray-200 transition-all duration-200 text-gray-800 font-bold py-2 px-3 border-2 hover:border-transparent dark:border-gray-200 border-gray-800 flex gap-3 rounded-lg">
+                    Let's Connect <FaArrowRight size={"1rem"} style={arrowStyle}/>
+                </button>
             </div>
-            <div className={loaded4 ? "transition-all duration-1000 flex mt-auto gap-4 justify-center" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
+            <div className={loaded4 ? "transition-all duration-1000 flex mt-auto gap-8 justify-evenly" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialInstagram style={style} size="3rem"/> </div> 
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialLinkedin style={style} size="3rem"/> </div> 
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <IoLogoGithub style={style} size="3rem"/> </div>
