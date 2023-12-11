@@ -64,30 +64,30 @@ export default function Hero({theme}){
     const arrowStyle = {margin:"auto" }
 
     return(
-        <div className="p-5 md:p-12 h-screen flex flex-col">
-            <div>
-                <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+        <div className="p-5 md:p-12 mt-10 md:mt-0 h-[100dvh] flex flex-col">
+            <div className="z-40">
+                <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
                     <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-700 tracking-tight">HELLO  I'M</p>
                 </div>
-                <div className= {loaded1 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <div className= {loaded1 ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
                     <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500 tracking-tight">TRI HOANG</p>
                 </div>
-                <div className= {loaded2 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <div className= {loaded2 ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
                     <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">SOFTWARE</p>
                 </div>
-                <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center md:text-left" : "opacity-0 transition-all duration-1000"}>
+                <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
                     <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">ENGINEER</p>
                 </div>
                 </div>
             <div className={loaded4? "m-auto flex justify-center transition-all duration-1000 " : "opacity-0"}>
-                <button class="bg-transparent hover:bg-gray-800 dark:hover:bg-gray-200 dark:hover:text-gray-800 hover:text-gray-200 dark:text-gray-200 transition-all duration-200 text-gray-800 font-bold py-2 px-3 border-2 hover:border-transparent dark:border-gray-200 border-gray-800 flex gap-3 rounded-lg">
+                <button class="bg-transparent hover:bg-sky-800 hover:text-gray-200 dark:text-gray-200 transition-all duration-200 text-gray-800 font-bold py-2 px-3 border-2 hover:border-transparent border-gray-800 flex gap-3 rounded-lg">
                     Let's Connect <FaArrowRight size={"1rem"} style={arrowStyle}/>
                 </button>
             </div>
-            <div className={loaded4 ? "transition-all duration-1000 flex mt-auto gap-8 justify-evenly" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
-                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialInstagram style={style} size="3rem"/> </div> 
-                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <SlSocialLinkedin style={style} size="3rem"/> </div> 
-                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <IoLogoGithub style={style} size="3rem"/> </div>
+            <div className={loaded4 ? "transition-all duration-1000 flex mt-auto gap-8 justify-center" : " -translate-x-full transition-all duration-1000 opacity-0 "}>
+                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <a target="_blank" href="google.com"> <SlSocialInstagram style={style} size="3rem"/> </a> </div> 
+                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <a target="_blank" href="https://www.linkedin.com/in/tri-hoang-730602286/"> <SlSocialLinkedin style={style} size="3rem"/> </a> </div> 
+                <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <a target="_blank" href="google.com"> <IoLogoGithub style={style} size="3rem"/> </a> </div>
                 <div className="inline-block p-1 md:p-6 rounded-full hover:scale-125 transition-all duration-100 cursor-pointer"> <MdEmail style={style} size="3rem"/> </div> 
             </div>
         </div>

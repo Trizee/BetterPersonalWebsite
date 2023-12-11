@@ -2,6 +2,8 @@ import { useState,useEffect } from 'react'
 import Hero from './Components/Hero';
 import NavBar from './Components/Navbar';
 
+
+
 function App() {
   
   // Theme Setter 
@@ -34,11 +36,9 @@ function App() {
   return (
     <div className='bg-gray-200 dark:bg-gray-950'>
     <NavBar theme={theme} setTheme={setTheme}/>
-    <div className='transition-all duration-1000 grid grid-cols-6 grid-flow-col'>
+    <div className='transition-all duration-1000'>
       {/* <button className="border-l-neutral-800 bg-red-700 rounded-full p-2 flex justify-center m-auto animate-pulse" onClick={handleClick}> darkmode</button> */}
-      <div className='col-span-6 md:col-span-2'>
         <Hero theme={theme} />
-      </div>
     </div>
     </div>
   )
