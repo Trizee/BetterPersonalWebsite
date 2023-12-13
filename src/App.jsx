@@ -35,11 +35,11 @@ function App() {
 
   return (
     <div className='bg-gray-200 dark:bg-gray-950'>
-    <NavBar theme={theme} setTheme={setTheme}/>
-    <div className='transition-all duration-1000'>
-      {/* <button className="border-l-neutral-800 bg-red-700 rounded-full p-2 flex justify-center m-auto animate-pulse" onClick={handleClick}> darkmode</button> */}
-        <Hero theme={theme} />
-    </div>
+      <NavBar theme={theme} setTheme={setTheme}/>
+      <div className='transition-all duration-1000'>
+        {/* <button className="border-l-neutral-800 bg-red-700 rounded-full p-2 flex justify-center m-auto animate-pulse" onClick={handleClick}> darkmode</button> */}
+          <Hero theme={theme} />
+      </div>  
     </div>
   )
 }
