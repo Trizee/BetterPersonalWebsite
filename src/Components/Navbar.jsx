@@ -1,7 +1,9 @@
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { useState,useEffect } from "react";
-import { IoTriangle } from "react-icons/io5";
+import { GoHomeFill } from "react-icons/go";
+import { FaCode } from "react-icons/fa";
+import { IoInformationCircle } from "react-icons/io5";
 
 export default function NavBar({theme,setTheme}){
 
@@ -19,16 +21,13 @@ export default function NavBar({theme,setTheme}){
 
     return (
         <>
-        <div className="transition-all duration-1000 flex w-full bg-sky-900 p-2 top-0 relative">
-            <IoTriangle className="mr-auto" size="2rem"/>
-            <div className="flex items-center">
-                <p className="font-bold text-gray-950 dark:text-gray-200 mx-10 cursor-pointer hover:underline-offset-4 underline">ABOUT</p>
-                <p className="font-bold text-gray-950 dark:text-gray-200 mx-10 cursor-pointer">PROJECTS</p>
-                <p className="font-bold text-gray-950 dark:text-gray-200 mx-10 cursor-pointer">RESUME</p>
-            </div>
-            <div className="ml-auto cursor-pointer">
-            {theme === "dark" ? <MdLightMode style={style} size="2rem" onClick={()=>{setTheme("light")}} /> : <MdDarkMode style={style} size="2rem" onClick={()=>{setTheme("dark")}}/>}
-            </div>
+        <div className="h-screen w-16 fixed z-10 top-0 left-0 flex flex-col content-center items-center justify-center">
+                <div className="p-1 shadow-md rounded-md bg-sky-900 transition-all ease-linear duration-500 h-1/4 justify-evenly flex flex-col">
+                <GoHomeFill size="3rem"/>
+                <FaCode size="3rem"/>
+                <IoInformationCircle size="3rem"/>
+                {theme === "dark" ? <MdLightMode style={style} size="3rem" onClick={()=>{setTheme("light")}} /> : <MdDarkMode style={style} size="3rem" onClick={()=>{setTheme("dark")}}/>}
+                </div>
         </div>
         </>
     )

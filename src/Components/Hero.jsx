@@ -67,16 +67,16 @@ export default function Hero({theme}){
         <div className="p-5 md:p-12 mt-10 md:mt-0 h-[100dvh] flex flex-col">
             <div className="z-40">
                 <div className= {loaded ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
-                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-700 tracking-tight">HELLO  I'M</p>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500 tracking-tight">HELLO  I'M</p>
                 </div>
                 <div className= {loaded1 ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
                     <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-800 dark:text-gray-200 transtion-all duration-500 tracking-tight">TRI HOANG</p>
                 </div>
                 <div className= {loaded2 ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
-                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">SOFTWARE</p>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-500 tracking-tighter">SOFTWARE</p>
                 </div>
                 <div className= {loaded3 ? "opacity-100 transition-all duration-1000 text-center" : "opacity-0 transition-all duration-1000"}>
-                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-300 tracking-tighter">ENGINEER</p>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-semibold p-2 text-gray-600 dark:text-gray-400 transtion-all duration-500 tracking-tighter">ENGINEER</p>
                 </div>
                 </div>
             <div className={loaded4? "m-auto flex justify-center transition-all duration-1000 " : "opacity-0"}>
