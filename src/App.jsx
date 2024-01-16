@@ -56,7 +56,7 @@ function App() {
   
 
   return (
-    <div className='font-inter bg-white dark:bg-space transition-all text-black dark:text-white min-h-screen'>
+    <div className='font-inter bg-white dark:bg-space transition-all text-black dark:text-white min-h-screen pt-8'>
       <RouterProvider router={router} />
     </div>
   )

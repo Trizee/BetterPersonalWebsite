@@ -115,7 +115,7 @@ export default function Navbar({handleClick}){
             transition={{duration: 0.3, type: "spring" }}
             
             className={open ?
-                "flex justify-evenly gap-2 md:gap-5 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
+                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
                 "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-14 h-14 bg-darkGray rounded-full px-2 shadow-md transition-all duration-300"
             }>
                     {displayIcons}
