@@ -27,22 +27,23 @@ function App() {
     } 
   },[theme])
 
+  const handleClick = () => {
+    setTheme(theme === "dark"? "light" : "dark")
+  }
   // Routes
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Rootlayout/>}>
+      <Route path="/" element={<Rootlayout handleClick={handleClick}/>}>
         <Route index element= { <Landing /> } />
       </Route>
     )
   )
 
-  const handleClick = () => {
-    setTheme(theme === "dark"? "light" : "dark")
-  }
+  
 
   return (
-    <div className='font-inter bg-space'>
+    <div className='font-inter bg-white dark:bg-space'>
       <RouterProvider router={router} />
     </div>
   )
