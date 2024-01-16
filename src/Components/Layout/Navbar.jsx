@@ -58,10 +58,12 @@ export default function Navbar({handleClick}){
         style={{display: open? "flex" : "none"}}
         className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest" key={i.text}>
             <motion.p variants={slashMotion}
-            className="absolute text-xs -top-6 bg-white rounded-full px-2">
+            className="absolute text-xs -top-6 bg-white rounded-full px-2 text-black">
                     {i.text}
             </motion.p>
-            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>nav(i.path)}>{i.icon}</motion.p>
+            <motion.p 
+            style={{backgroundColor: page === i.path? "#ffffff" : "" , color: page === i.path ? "#000000" : ""}}
+            className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>nav(i.path)}>{i.icon}</motion.p>
         </motion.div>
     )
     })
@@ -72,7 +74,7 @@ export default function Navbar({handleClick}){
         style={{display: open? "flex" : "none"}}
         className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
             <motion.p variants={slashMotion}
-            className="absolute text-xs -top-6 bg-white rounded-full px-2">
+            className="absolute text-xs -top-6 bg-white rounded-full px-2 text-black">
                     Dark
             </motion.p>
             <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2"><MdOutlineDarkMode size={iconSize} onClick={()=>handleClick()}/></motion.p>
@@ -86,13 +88,13 @@ export default function Navbar({handleClick}){
         <motion.div 
         className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
             <motion.p variants={slashMotion}
-            className="absolute text-xs -top-6 bg-white rounded-full px-2">
+            className="absolute text-xs -top-6 bg-white rounded-full px-2 text-black">
                     {open ? "Hide" : "Expand"}
             </motion.p>
             <motion.p
             initial={{ rotate: 0 }}
             animate={{ rotate: open ? 0 : 90 }}
-            exit={{ rotate: open ? 90 : 0 }}
+            exit={{ rotate: open ? 0 : 90 }}
             transition={{ duration: 0.3, type: "spring" }}
             className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>setOpen(!open)}>
                 {open ? <LuShrink size={iconSize}/> : <LuExpand size={iconSize}/>}
@@ -107,14 +109,13 @@ export default function Navbar({handleClick}){
     return(
         <div className="z-50 flex w-full justify-center">
             <motion.div 
-            // layout
-            // layoutRoot
+            layout
             initial={{translateY: 100,}}
             animate={{translateY: 0}}
             transition={{duration: 0.3, type: "spring" }}
             
             className={open ?
-                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
+                "flex justify-evenly gap-2 md:gap-5 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
                 "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-14 h-14 bg-darkGray rounded-full px-2 shadow-md transition-all duration-300"
             }>
                     {displayIcons}
