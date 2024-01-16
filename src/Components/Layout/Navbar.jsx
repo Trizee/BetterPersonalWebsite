@@ -5,14 +5,20 @@ import { PiPaperPlaneTilt } from "react-icons/pi";
 import { AiOutlineFile } from "react-icons/ai";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { LuShrink } from "react-icons/lu";
+import { LuExpand } from "react-icons/lu";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
+
+import { useNavigate,useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
 export default function Navbar({handleClick}){
 
     const [open,setOpen] = useState(true)
+
+    let location = useLocation()
+    console.log(location)
 
     let iconSize = "1.5rem" 
 
@@ -70,13 +76,14 @@ export default function Navbar({handleClick}){
     function hideBtn(){
         return(
         <motion.div 
-        style={{position: open? "abosolute" : "static"}}
         className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
             <motion.p variants={slashMotion}
             className="absolute text-xs -top-6 bg-white rounded-full px-2">
-                    Hide
+                    {open ? "Hide" : "Expand"}
             </motion.p>
-            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2"><LuShrink size={iconSize} onClick={()=>setOpen(!open)}/></motion.p>
+            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>setOpen(!open)}>
+                {open ? <LuShrink size={iconSize}/> : <LuExpand size={iconSize}/>}
+                </motion.p>
         </motion.div>
         )
     }
@@ -90,11 +97,14 @@ export default function Navbar({handleClick}){
             layout
             layoutRoot
             transition={{
-                opacity: { ease: "linear" },
+                display: { ease: "linear" },
                 layout: { duration: 0.3 }
             }}
             
-            className="flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md">
+            className={open ?
+                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
+                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-14 h-14 bg-darkGray rounded-full px-2 shadow-md transition-all"
+            }>
                     {displayIcons}
                     <motion.p 
                     style={{display: open? "flex" : "none"}}
