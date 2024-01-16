@@ -12,7 +12,7 @@ export default function Rootlayout({handleClick}){
         <>
             <Navbar handleClick={handleClick}/>
             <AnimatePresence >
-                <Outlet location={location} key={location.pathname}/>
+                <Outlet location={location} key={location}/>
             </AnimatePresence>
         </>
     )
