@@ -89,7 +89,6 @@ export default function Navbar({handleClick}){
             <motion.div 
             layout
             layoutRoot
-            style={{width: open? "28rem" : "3.5rem"}}
             transition={{
                 opacity: { ease: "linear" },
                 layout: { duration: 0.3 }
