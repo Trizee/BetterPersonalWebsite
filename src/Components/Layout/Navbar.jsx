@@ -2,7 +2,7 @@ import { GoHome } from "react-icons/go";
 import { PiCursorClick } from "react-icons/pi";
 import { PiPencilSimpleLineDuotone } from "react-icons/pi";
 import { PiPaperPlaneTilt } from "react-icons/pi";
-import { AiOutlineFile } from "react-icons/ai";
+import { AiOutlineConsoleSql, AiOutlineFile } from "react-icons/ai";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { LuShrink } from "react-icons/lu";
 import { LuExpand } from "react-icons/lu";
@@ -16,18 +16,25 @@ import { motion } from "framer-motion";
 export default function Navbar({handleClick}){
 
     const [open,setOpen] = useState(true)
+    const [page,setPage] = useState(null)
 
     let location = useLocation()
-    console.log(location)
+    let nav = useNavigate()
+
+    useEffect(()=>{
+        setPage(location.pathname)
+    },[location])
+
+    console.log(page)
 
     let iconSize = "1.5rem" 
 
     let icons = [
-    {icon:<GoHome size={iconSize}/> , text:"Home"},
-    {icon:<PiCursorClick size={iconSize}/> ,text:"Projects"},
-    {icon:<PiPencilSimpleLineDuotone size={iconSize}/>,text:"Blog"},
-    {icon:<PiPaperPlaneTilt size={iconSize}/>,text:"Contact"},
-    {icon:<AiOutlineFile size={iconSize}/>,text:"Resume"}]
+    {icon:<GoHome size={iconSize}/> , text:"Home", path:"/"},
+    {icon:<PiCursorClick size={iconSize}/> ,text:"Projects", path:"/projects"},
+    {icon:<PiPencilSimpleLineDuotone size={iconSize}/>,text:"Blog", path:"/blog"},
+    {icon:<PiPaperPlaneTilt size={iconSize}/>,text:"Contact", path:"/contact"},
+    {icon:<AiOutlineFile size={iconSize}/>,text:"Resume", path:"/resume"}]
 
     const slashMotion = {
         rest: { opacity: 0, ease: "easeIn",type: "tween", duration: 0.1, y: -5,
@@ -54,7 +61,7 @@ export default function Navbar({handleClick}){
             className="absolute text-xs -top-6 bg-white rounded-full px-2">
                     {i.text}
             </motion.p>
-            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2">{i.icon}</motion.p>
+            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>nav(i.path)}>{i.icon}</motion.p>
         </motion.div>
     )
     })
@@ -103,7 +110,7 @@ export default function Navbar({handleClick}){
             
             className={open ?
                 "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
-                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-14 h-14 bg-darkGray rounded-full px-2 shadow-md transition-all"
+                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-14 h-14 bg-darkGray rounded-full px-2 shadow-md transition-all duration-300"
             }>
                     {displayIcons}
                     <motion.p 

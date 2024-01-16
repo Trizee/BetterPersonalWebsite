@@ -1,8 +1,15 @@
 import { useState,useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider, useLocation } from 'react-router-dom';
 
 import Rootlayout from './Components/Layout/Rootlayout';
-import Landing from './Components/Landing/Landing';
+
+
+import Home from './Components/Home/Home';
+import Project from './Components/Projects/Project';
+import Blog from './Components/Blog/Blog';
+import Contact from './Components/Contact/Contact';
+import Resume from './Components/Resume/Resume';
+
 
 function App() {
   
@@ -30,12 +37,18 @@ function App() {
   const handleClick = () => {
     setTheme(theme === "dark"? "light" : "dark")
   }
+
+  
   // Routes
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Rootlayout handleClick={handleClick}/>}>
-        <Route index element= { <Landing /> } />
+        <Route index element= { <Home /> } />
+        <Route path='/projects' element={<Project />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/resume' element={<Resume />} />
       </Route>
     )
   )
@@ -43,7 +56,7 @@ function App() {
   
 
   return (
-    <div className='font-inter bg-white dark:bg-space'>
+    <div className='font-inter bg-white dark:bg-space transition-all text-black dark:text-white'>
       <RouterProvider router={router} />
     </div>
   )
