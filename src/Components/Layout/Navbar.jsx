@@ -80,6 +80,7 @@ export default function Navbar({handleClick}){
         )
     }
 
+
     function hideBtn(){
         return(
         <motion.div 
@@ -88,7 +89,12 @@ export default function Navbar({handleClick}){
             className="absolute text-xs -top-6 bg-white rounded-full px-2">
                     {open ? "Hide" : "Expand"}
             </motion.p>
-            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>setOpen(!open)}>
+            <motion.p
+            initial={{ rotate: 0 }}
+            animate={{ rotate: open ? 0 : 90 }}
+            exit={{ rotate: open ? 90 : 0 }}
+            transition={{ duration: 0.3, type: "spring" }}
+            className="text-white rounded-full hover:bg-white hover:text-black p-2" onClick={()=>setOpen(!open)}>
                 {open ? <LuShrink size={iconSize}/> : <LuExpand size={iconSize}/>}
                 </motion.p>
         </motion.div>
@@ -101,12 +107,11 @@ export default function Navbar({handleClick}){
     return(
         <div className="z-50 flex w-full justify-center">
             <motion.div 
-            layout
-            layoutRoot
-            transition={{
-                display: { ease: "linear" },
-                layout: { duration: 0.3 }
-            }}
+            // layout
+            // layoutRoot
+            initial={{translateY: 100,}}
+            animate={{translateY: 0}}
+            transition={{duration: 0.3, type: "spring" }}
             
             className={open ?
                 "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
