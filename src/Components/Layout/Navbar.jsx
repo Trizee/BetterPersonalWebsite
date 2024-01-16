@@ -77,7 +77,7 @@ export default function Navbar({handleClick}){
 
     return(
         <div className="z-50 flex w-full justify-center">
-            <div className="flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-2 md:bottom-4 w-[95%] md:w-[28rem]  h-12 md:h-14 bg-darkGray rounded-full px-2 shadow-md">
+            <div className="flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md">
                 {displayIcons}
                 <p className="h-[50%] w-[1px] bg-gray"></p>
                 {darkModeBtn()}
