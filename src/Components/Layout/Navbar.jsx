@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 
 export default function Navbar({handleClick}){
 
+    const [open,setOpen] = useState(true)
+
     let iconSize = "1.5rem" 
 
     let icons = [
@@ -39,7 +41,9 @@ export default function Navbar({handleClick}){
       };
 
     let displayIcons = icons.map(i => {return(
-        <motion.div className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest" key={i.text}>
+        <motion.div 
+        style={{display: open? "flex" : "none"}}
+        className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest" key={i.text}>
             <motion.p variants={slashMotion}
             className="absolute text-xs -top-6 bg-white rounded-full px-2">
                     {i.text}
@@ -51,7 +55,9 @@ export default function Navbar({handleClick}){
 
     function darkModeBtn(){
         return(
-        <motion.div className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
+        <motion.div 
+        style={{display: open? "flex" : "none"}}
+        className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
             <motion.p variants={slashMotion}
             className="absolute text-xs -top-6 bg-white rounded-full px-2">
                     Dark
@@ -63,26 +69,40 @@ export default function Navbar({handleClick}){
 
     function hideBtn(){
         return(
-        <motion.div className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
+        <motion.div 
+        style={{position: open? "abosolute" : "static"}}
+        className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
             <motion.p variants={slashMotion}
             className="absolute text-xs -top-6 bg-white rounded-full px-2">
                     Hide
             </motion.p>
-            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2"><LuShrink size={iconSize}/></motion.p>
+            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2"><LuShrink size={iconSize} onClick={()=>setOpen(!open)}/></motion.p>
         </motion.div>
         )
     }
 
+    // hide component
     
 
     return(
         <div className="z-50 flex w-full justify-center">
-            <div className="flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md">
-                {displayIcons}
-                <p className="h-[50%] w-[1px] bg-gray"></p>
-                {darkModeBtn()}
-                {hideBtn()}
-            </div>
+            <motion.div 
+            layout
+            layoutRoot
+            style={{width: open? "28rem" : "3.5rem"}}
+            transition={{
+                opacity: { ease: "linear" },
+                layout: { duration: 0.3 }
+            }}
+            
+            className="flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md">
+                    {displayIcons}
+                    <motion.p 
+                    style={{display: open? "flex" : "none"}}
+                    className="h-[50%] w-[1px] bg-gray"></motion.p>
+                    {darkModeBtn()}
+                    {hideBtn()}
+            </motion.div>
         </div>
     )
 }
