@@ -11,7 +11,7 @@ export default function Blog(){
                     animate={{y: 0, opacity:1}}
                     exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
                     >
-                    <div className="flex w-full md:w-[30rem] items-center">
+                    <div className="flex w-full md:w-[30rem] items-center text-black dark:text-white ">
                         <p >Blog</p>
                     </div>
             </motion.div>

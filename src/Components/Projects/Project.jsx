@@ -20,7 +20,7 @@ export default function Project(){
             animate={{y: 0, opacity:1}}
             exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
             >
-                <div className="w-full md:w-[30rem] py-6">
+                <div className="w-full md:w-[30rem] py-6 text-black dark:text-white">
                     {/* Content Here */}
                 </div>
         </motion.div>

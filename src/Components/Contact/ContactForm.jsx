@@ -23,7 +23,7 @@ export default function ContactForm(){
                     type="text" 
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="h-9 w-1/2 bg-lightGray rounded-lg px-3"
+                    className="h-9 w-1/2 bg-lightGray rounded-lg px-3 text-white"
                     placeholder="Name"
                     />
                 
@@ -32,7 +32,7 @@ export default function ContactForm(){
                     type="text" 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="h-9 w-1/2 bg-lightGray rounded-lg px-3"
+                    className="h-9 w-1/2 bg-lightGray rounded-lg px-3 text-white"
                     placeholder="Email"
                     />
                 
@@ -42,7 +42,7 @@ export default function ContactForm(){
                     type="text" 
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="h-52 w-full bg-lightGray rounded-lg mt-4 px-3 pt-3"
+                    className="h-52 w-full bg-lightGray rounded-lg mt-3 px-3 pt-3 text-white"
                     placeholder="Message"
             />
 

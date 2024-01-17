@@ -23,8 +23,11 @@ export default function Stack(){
                 exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
                 >
                     <div className="w-full md:w-[30rem] py-6">
-                        {/* Content Here */}
+
+                        <p className="py-6 text-2xl text-gray">Things I <span className="text-black dark:text-white">use.</span></p>
+
                     </div>
+
             </motion.div>
         </>
     )
