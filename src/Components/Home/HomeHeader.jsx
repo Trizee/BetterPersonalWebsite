@@ -10,7 +10,24 @@ export default function HomeHeader(){
         "experiences."
     ]
 
-    let [quote,setQuote] = useState("websites.")
+    let [quote,setQuote] = useState(quotes[0])
+
+    useEffect(() => {
+
+        let currentIndex = 0;
+
+        const interval = setInterval(() => {
+            setQuote(quotes[currentIndex]);
+            currentIndex = (currentIndex + 1) % quotes.length;
+      
+            // Check if it has looped through all quotes
+            // if (currentIndex === 0) {
+            //   // Optionally add additional logic when it completes a loop
+            // }
+        }, 1000);
+        return () => clearInterval(interval);
+      }, [quote]);
+
 
     return(
         <>
