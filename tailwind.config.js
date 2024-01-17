@@ -20,7 +20,9 @@ export default {
       darkGray: '#161618',
       space:'#212124',
       white: "#ffffff",
-      gray: "#818181"
+      gray: "#818181",
+      green: "#00a300",
+      lightGray: "#343d46"
     },
   },
   plugins: [],

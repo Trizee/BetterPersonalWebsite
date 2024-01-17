@@ -1,17 +1,14 @@
 import { motion } from "framer-motion"
 import { useEffect,useState } from "react"
-import { TfiEmail } from "react-icons/tfi";
-import { useNavigate } from "react-router-dom";
+import { AiOutlineCalendar } from "react-icons/ai";
 
-export default function HomeHeader(){
+export default function ContactHeader(){
 
-    let nav = useNavigate()
 
     let quotes = [
-        "websites.",
-        "apps.",
-        "APIs.",
-        "experiences."
+        "hey.",
+        "hello.",
+        "hola.",
     ]
 
     let [quote,setQuote] = useState(quotes[0])
@@ -21,7 +18,7 @@ export default function HomeHeader(){
 
         const interval = setInterval(() => {
             setQuote(quotes[index])
-            if(index === 3){
+            if(index === 2){
                 setIndex(0)
             } else {
                 setIndex(index + 1)
@@ -33,8 +30,8 @@ export default function HomeHeader(){
 
     return(
         <>
-        <p className="text-3xl text-darkGray dark:text-gray py-8 flex">
-        I build
+        <p className="text-3xl text-darkGray dark:text-gray py-6 flex">
+        Say
         <motion.p
         initial={{y: -40, opacity:0, transitionDelay: 0.2}}
         animate={{y: 0, opacity:1}}
@@ -45,21 +42,21 @@ export default function HomeHeader(){
             {quote}
         </motion.p>
         </p>
-        <p className="text-xl text-space dark:text-gray">I'm Tri Hoang, a passionate Software Engineer living in Denver, Colorado. Always striving to learn and improve. </p>
+        <p className="text-xl text-space dark:text-gray">Looking to start a project, connect or just chat? Reach Out. </p>
 
         <div className="py-6 flex items-center gap-4">
                 <p className="h-2 w-2 bg-green rounded-full"></p>
                 <p className="text-sm text-space dark:text-gray">Available for new opportunities</p>
         </div>
 
-        <div className="py-2">
-            <div className=" h-9 w-40 rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all"
-            onClick={()=>nav("/contact")}
-            >
-                <TfiEmail size={"1.12rem"}/>
-                <p>Contact Me</p>
+        <div className="py-2 pb-6">
+            <div className="h-9 w-40  rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all">
+                <AiOutlineCalendar size={"1.12rem"}/>
+                <p>Book a Call</p>
             </div>
         </div>
+
+        <p className="w-full h-[1px] bg-lightGray mt-10 mb-2"></p>
            
         </>
     )
