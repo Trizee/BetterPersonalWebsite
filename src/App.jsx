@@ -9,6 +9,7 @@ import Project from './Components/Projects/Project';
 import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
 import Resume from './Components/Resume/Resume';
+import Stack from './Components/Stack/Stack';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />
+        <Route path='/stack' element={<Stack />} />
       </Route>
     )
   )

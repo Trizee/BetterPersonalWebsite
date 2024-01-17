@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 
-export default function Blog(){
+export default function Stack(){
 
     return(
         <>
@@ -12,7 +12,7 @@ export default function Blog(){
                     exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
                     >
                     <div className="flex w-full md:w-[30rem] items-center">
-                        <p >Blog</p>
+                        <p >Stack</p>
                     </div>
             </motion.div>
 

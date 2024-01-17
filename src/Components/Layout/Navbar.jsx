@@ -1,11 +1,12 @@
 import { GoHome } from "react-icons/go";
-import { PiCursorClick } from "react-icons/pi";
 import { PiPencilSimpleLineDuotone } from "react-icons/pi";
 import { PiPaperPlaneTilt } from "react-icons/pi";
-import { AiOutlineConsoleSql, AiOutlineFile } from "react-icons/ai";
+import { AiOutlineFile } from "react-icons/ai";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { LuShrink } from "react-icons/lu";
 import { LuExpand } from "react-icons/lu";
+import { BsCodeSlash } from "react-icons/bs";
+import { GoStack } from "react-icons/go";
 
 import { useState,useEffect } from "react";
 
@@ -31,10 +32,13 @@ export default function Navbar({handleClick}){
 
     let icons = [
     {icon:<GoHome size={iconSize}/> , text:"Home", path:"/"},
-    {icon:<PiCursorClick size={iconSize}/> ,text:"Projects", path:"/projects"},
+    {icon:<BsCodeSlash size={iconSize}/> ,text:"Projects", path:"/projects"},
     {icon:<PiPencilSimpleLineDuotone size={iconSize}/>,text:"Blog", path:"/blog"},
+    {icon:<GoStack size={iconSize}/>,text:"Stack", path:"/stack"},
     {icon:<PiPaperPlaneTilt size={iconSize}/>,text:"Contact", path:"/contact"},
-    {icon:<AiOutlineFile size={iconSize}/>,text:"Resume", path:"/resume"}]
+    {icon:<AiOutlineFile size={iconSize}/>,text:"Resume", path:"/resume"}
+    ]
+    
 
     const slashMotion = {
         rest: { opacity: 0, ease: "easeIn",type: "tween", duration: 0.1, y: -5,
@@ -115,7 +119,7 @@ export default function Navbar({handleClick}){
             transition={{duration: 0.3, type: "spring" }}
             
             className={open ?
-                "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
+                "flex justify-evenly gap-4 items-center fixed bottom-3 w-[95%] md:w-[28rem]  h-14 bg-darkGray rounded-full px-2 shadow-md transition-all ":
                 "flex justify-evenly gap-2 md:gap-6 items-center fixed bottom-3 w-14 h-14 bg-darkGray rounded-full px-2 shadow-md transition-all duration-300"
             }>
                     {displayIcons}
