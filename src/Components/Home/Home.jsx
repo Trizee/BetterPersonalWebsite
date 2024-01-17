@@ -5,7 +5,7 @@ export default function Home(){
     return(
         <>
             <motion.div 
-                className=" w-full justify-center flex px-2"
+                className=" w-full justify-center flex px-4"
                 initial={{y: -90, opacity:0}}
                 animate={{y: 0, opacity:1}}
                 exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
@@ -20,7 +20,7 @@ export default function Home(){
             </motion.div>
 
             <motion.div 
-            className=" w-full justify-center flex px-2"
+            className=" w-full justify-center flex px-4"
             initial={{y: 90, opacity:0}}
             animate={{y: 0, opacity:1}}
             exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}

@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar{
+    height: 0.25rem;
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #161618;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #212124;
+}

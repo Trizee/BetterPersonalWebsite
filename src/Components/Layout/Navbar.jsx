@@ -107,7 +107,7 @@ export default function Navbar({handleClick}){
     
 
     return(
-        <div className="z-50 flex w-full justify-center">
+        <div className="z-50 flex w-full justify-center sticky bottom-3">
             <motion.div 
             layout
             initial={{translateY: 100,}}

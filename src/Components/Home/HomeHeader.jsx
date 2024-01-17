@@ -11,22 +11,20 @@ export default function HomeHeader(){
     ]
 
     let [quote,setQuote] = useState(quotes[0])
+    let [index,setIndex] = useState(0);
 
     useEffect(() => {
 
-        let currentIndex = 0;
-
         const interval = setInterval(() => {
-            setQuote(quotes[currentIndex]);
-            currentIndex = (currentIndex + 1) % quotes.length;
-      
-            // Check if it has looped through all quotes
-            // if (currentIndex === 0) {
-            //   // Optionally add additional logic when it completes a loop
-            // }
-        }, 1000);
+            setQuote(quotes[index])
+            if(index === 3){
+                setIndex(0)
+            } else {
+                setIndex(index + 1)
+            }
+        }, 2500);
         return () => clearInterval(interval);
-      }, [quote]);
+      }, [index]);
 
 
     return(
@@ -34,15 +32,16 @@ export default function HomeHeader(){
         <p className="text-3xl text-darkGray dark:text-gray py-8 flex">
         I build
         <motion.p
-        // initial={{y: 90, opacity:0}}
+        initial={{y: -40, opacity:0, transitionDelay: 0.2}}
         animate={{y: 0, opacity:1}}
-        exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
+        exit={{y: 40, opacity:1, transition:{duration:0.2, delay: 0.2}}}
         className="px-2 text-black dark:text-white"
+        key={quote}
         >
             {quote}
         </motion.p>
         </p>
-        <p className="text-xl text-darkGray dark:text-gray">I'm Tri Hoang, a passionate Software Engineer living in Denver, Colorado. Always striving to improve and learn. </p>
+        <p className="text-xl text-space dark:text-gray">I'm Tri Hoang, a passionate Software Engineer living in Denver, Colorado. Always striving to improve and learn. </p>
         </>
     )
 }
