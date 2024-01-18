@@ -13,7 +13,7 @@ export default function PDFViewer(){
             </div>
 
             <div className="py-6">
-                <iframe src="src/Public/Tri Resume 2023.pdf" width="100%" height="680px" className="rounded-lg" />
+                <iframe src='src/Public/Tri Resume 2023.pdf' width="100%" height="680px" className="rounded-lg" />
             </div>
 
         </>
