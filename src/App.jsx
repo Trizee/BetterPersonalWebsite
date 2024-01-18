@@ -51,16 +51,16 @@ function App() {
   // Icons
 
   let stackIcons = [
-    {icon:html, title: "HTML" ,des: "Frontend"},
-    {icon:css, title: "CSS",des: "Frontend"},
-    {icon:js, title: "JavaScript",des: "Progamming Language"},
-    {icon:reactIcon, title: "React",des: "JavaScript Framwork"},
-    {icon:tailwind, title: "TailwindCSS",des: "CSS Framework"},
-    {icon:bootstrap,title: "BootStrap",des: "CSS Framework"},
-    {icon:python,title: "Python",des: "Progamming Language"},
-    {icon:sql,title: "SQL",des: "Backend"},
-    {icon:figma,title: "Figma",des: "Design Tool"},
-    {icon:vscode, title: "VScode",des: "IDE"}
+    {icon:html, title: "HTML" ,des: "Frontend",doc:"https://developer.mozilla.org/en-US/docs/Web/HTML"},
+    {icon:css, title: "CSS",des: "Frontend",doc:"https://developer.mozilla.org/en-US/docs/Web/CSS"},
+    {icon:js, title: "JavaScript",des: "Progamming Language",doc:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
+    {icon:reactIcon, title: "React",des: "JavaScript Framwork",doc:"https://react.dev/"},
+    {icon:tailwind, title: "TailwindCSS",des: "CSS Framework",doc:"https://tailwindcss.com/"},
+    {icon:bootstrap,title: "BootStrap",des: "CSS Framework",doc:"https://getbootstrap.com/"},
+    {icon:python,title: "Python",des: "Progamming Language",doc:"https://docs.python.org/3/"},
+    {icon:sql,title: "SQL",des: "Backend",doc:"https://developer.mozilla.org/en-US/docs/Glossary/SQL"},
+    {icon:figma,title: "Figma",des: "Design Tool",doc:"https://www.figma.com/"},
+    {icon:vscode, title: "VScode",des: "IDE",doc:"https://code.visualstudio.com/"}
   ]
 
   

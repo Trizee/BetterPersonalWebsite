@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import HomeHeader from "./HomeHeader"
 import Links from "../Links"
 import HomeProjects from "./HomeProjects"
+import HomeStack from "./HomeStack"
 
 import { useNavigate } from "react-router-dom"
 
@@ -9,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 
-export default function Home({theme}){
+export default function Home({theme,stackIcons}){
 
     let nav = useNavigate()
 
@@ -70,6 +71,8 @@ export default function Home({theme}){
                     <p className="text-lg py-4">Stack</p>
                     <p className="text-gray text-lg py-4 hover:text-white transition-all cursor-pointer flex gap-2 items-center" onClick={()=>nav('/stack')}>All<FaArrowRight size={".9rem"}/></p>
                     </div>
+
+                    <HomeStack />
                   
                 </div>
             </motion.div>

@@ -6,6 +6,7 @@ export default function Stack({stackIcons}){
     
     let display = stackIcons.map(p => {
         return(
+            <a href={p.doc} target="_blank">
             <div className="w-full col-span-1 h-16 rounded-lg hover:border-2 dark:hover:border-none hover:border-gray dark:hover:bg-lightGray transition-all cursor-pointer">
                 <div className="flex items-center h-full  ">
                     <img src={p.icon} alt="" className="h-16 w-16 rounded-lg p-4"/>
@@ -15,6 +16,7 @@ export default function Stack({stackIcons}){
                     </div>
                 </div>
             </div>
+            </a>
         )
     })
 
