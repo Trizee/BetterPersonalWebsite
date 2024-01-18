@@ -33,7 +33,7 @@ export default function Navbar({handleClick}){
     let icons = [
     {icon:<GoHome size={iconSize}/> , text:"Home", path:"/"},
     {icon:<BsCodeSlash size={iconSize}/> ,text:"Projects", path:"/projects"},
-    {icon:<PiPencilSimpleLineDuotone size={iconSize}/>,text:"Blog", path:"/blog"},
+    // {icon:<PiPencilSimpleLineDuotone size={iconSize}/>,text:"Blog", path:"/blog"},
     {icon:<GoStack size={iconSize}/>,text:"Stack", path:"/stack"},
     {icon:<PiPaperPlaneTilt size={iconSize}/>,text:"Contact", path:"/contact"},
     {icon:<AiOutlineFile size={iconSize}/>,text:"Resume", path:"/resume"}

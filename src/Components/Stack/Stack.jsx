@@ -1,7 +1,22 @@
 import { motion } from "framer-motion"
 
 
-export default function Stack(){
+export default function Stack({stackIcons}){
+
+    
+    let display = stackIcons.map(p => {
+        return(
+            <div className="w-full col-span-1 h-16 rounded-lg hover:border-2 dark:hover:border-none hover:border-gray dark:hover:bg-lightGray transition-all cursor-pointer">
+                <div className="flex items-center h-full  ">
+                    <img src={p.icon} alt="" className="h-16 w-16 rounded-lg p-4"/>
+                    <div>
+                        <p>{p.title}</p>
+                        <p className="text-gray text-sm">{p.des}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    })
 
     return(
         <>
@@ -26,7 +41,13 @@ export default function Stack(){
 
                         <p className="py-6 text-2xl text-gray">Things I <span className="text-black dark:text-white">use.</span></p>
 
+                        <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-[30rem] gap-4 py-6">
+                        {display}
+                        </div>
+                        
                     </div>
+
+                    
 
             </motion.div>
         </>

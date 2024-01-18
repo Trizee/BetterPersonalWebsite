@@ -14,7 +14,7 @@ export default function PDFViewer(){
             </div>
 
             <div className="py-6">
-                <iframe src={Pdf} width="100%" height="680px" className="rounded-lg" />
+                <iframe src={Pdf} width="100%" height="680px" className="rounded-lg"/>
             </div>
 
         </>

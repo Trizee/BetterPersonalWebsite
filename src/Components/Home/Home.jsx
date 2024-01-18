@@ -1,15 +1,24 @@
 import { motion } from "framer-motion"
 import HomeHeader from "./HomeHeader"
 import Links from "../Links"
+import HomeProjects from "./HomeProjects"
+
+import { useNavigate } from "react-router-dom"
+
+import { FaArrowRight } from "react-icons/fa";
+
+
 
 export default function Home({theme}){
 
+    let nav = useNavigate()
+
     let where = 
     [
-        {head: "Linkedin" , ending: "Follow",link: ""},
-        {head: "Youtube" , ending: "Follow",link: ""},
-        {head: "Github" , ending: "Follow",link: ""},
-        {head: "Medium" , ending: "Follow",link: ""},
+        {head: "Linkedin" , ending: "Follow", link: "https://www.linkedin.com/in/tri-hoang-730602286/"},
+        {head: "Youtube" , ending: "Follow",link: "https://www.youtube.com/channel/UCwnrINoaJPc_AyV4_12n2ug"},
+        {head: "Github" , ending: "Follow",link: "https://github.com/Trizee"},
+        {head: "Medium" , ending: "Follow",link: "https://medium.com/@trihoang09"},
     ]
 
     let whereDisplay = where.map(w => {
@@ -46,8 +55,21 @@ export default function Home({theme}){
                 <div className="w-full md:w-[30rem] py-6">
                     <HomeHeader />
                     {/* Put Projects Here */}
-                    <p className="text-lg py-6">Where</p>
+                    
+                    <div className="flex items-center justify-between pt-8">
+                    <p className="text-lg py-4">Projects</p>
+                    <p className="text-gray text-lg py-4 hover:text-white transition-all cursor-pointer flex gap-2 items-center" onClick={()=>nav('/projects')}>All<FaArrowRight size={".9rem"}/></p>
+                    </div>
+
+                    <HomeProjects />
+
+                    <p className="text-lg py-4">Where</p>
                     {whereDisplay}
+
+                    <div className="flex items-center justify-between pt-8">
+                    <p className="text-lg py-4">Stack</p>
+                    <p className="text-gray text-lg py-4 hover:text-white transition-all cursor-pointer flex gap-2 items-center" onClick={()=>nav('/stack')}>All<FaArrowRight size={".9rem"}/></p>
+                    </div>
                   
                 </div>
             </motion.div>

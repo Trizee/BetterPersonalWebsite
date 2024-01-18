@@ -3,6 +3,8 @@ import { useEffect,useState } from "react"
 import { TfiEmail } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
 
+import { AiOutlineFile } from "react-icons/ai";
+
 export default function HomeHeader(){
 
     let nav = useNavigate()
@@ -30,6 +32,12 @@ export default function HomeHeader(){
         return () => clearInterval(interval);
       }, [index]);
 
+      
+    //   <div className="my-6 h-9 w-40 rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all">
+    //                         <AiOutlineFile size={"1.12rem"}/>
+    //                         <p>View Resume</p>
+    //                     </div>
+
 
     return(
         <>
@@ -52,12 +60,17 @@ export default function HomeHeader(){
                 <p className="text-sm text-space dark:text-gray">Available for new opportunities</p>
         </div>
 
-        <div className="py-2">
+        <div className="py-2 flex items center justify-between">
             <div className=" h-9 w-40 rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all"
             onClick={()=>nav("/contact")}
             >
                 <TfiEmail size={"1.12rem"}/>
                 <p>Contact Me</p>
+            </div>
+            <div className="h-9 w-40 rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all"
+            onClick={()=>nav("/resume")}>
+                <AiOutlineFile size={"1.12rem"}/>
+                <p>View Resume</p>
             </div>
         </div>
            

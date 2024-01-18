@@ -50,10 +50,12 @@ export default function ContactHeader(){
         </div>
 
         <div className="py-2 pb-6">
+            <a target="_blank" href="https://calendly.com/trihoang09">
             <div className="h-9 w-40  rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all">
                 <AiOutlineCalendar size={"1.12rem"}/>
                 <p>Book a Call</p>
             </div>
+            </a>
         </div>
 
         <p className="w-full h-[1px] bg-lightGray mt-10 mb-2"></p>
