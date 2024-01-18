@@ -72,7 +72,7 @@ export default function Home({theme,stackIcons}){
                     <p className="text-gray text-lg py-4 hover:text-white transition-all cursor-pointer flex gap-2 items-center" onClick={()=>nav('/stack')}>All<FaArrowRight size={".9rem"}/></p>
                     </div>
 
-                    <HomeStack />
+                    <HomeStack stackIcons={stackIcons}/>
                   
                 </div>
             </motion.div>

@@ -3,6 +3,7 @@ import { PiPencilSimpleLineDuotone } from "react-icons/pi";
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import { AiOutlineFile } from "react-icons/ai";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 import { LuShrink } from "react-icons/lu";
 import { LuExpand } from "react-icons/lu";
 import { BsCodeSlash } from "react-icons/bs";
@@ -14,7 +15,7 @@ import { useNavigate,useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-export default function Navbar({handleClick}){
+export default function Navbar({handleClick,theme}){
 
     const [open,setOpen] = useState(true)
     const [page,setPage] = useState(null)
@@ -79,9 +80,20 @@ export default function Navbar({handleClick}){
         className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer" initial="rest" whileHover="hover" animate="rest">
             <motion.p variants={slashMotion}
             className="absolute text-xs -top-6 bg-white rounded-full px-2 text-black">
-                    Dark
+                   {theme === "light" ? "Dark" : "Light"}
             </motion.p>
-            <motion.p className="text-white rounded-full hover:bg-white hover:text-black p-2"><MdOutlineDarkMode size={iconSize} onClick={()=>handleClick()}/></motion.p>
+            <motion.p 
+            initial={{ rotate: 0 }}
+            animate={{ rotate: theme === "light" ? 0 : 90 }}
+            exit={{ rotate: theme === "light" ? 0 : 90 }}
+            transition={{ duration: 0.3, type: "spring" }}
+            className="text-white rounded-full hover:bg-white hover:text-black p-2">
+                {theme === "light" ?
+                <MdOutlineDarkMode size={iconSize} onClick={()=>handleClick()}/>:
+                <MdOutlineLightMode size={iconSize} onClick={()=>handleClick()}/>
+                }
+                
+                </motion.p>
         </motion.div>
         )
     }
