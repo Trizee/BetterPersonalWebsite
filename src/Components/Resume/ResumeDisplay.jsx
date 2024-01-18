@@ -1,3 +1,4 @@
+import Pdf from "./Pdf.pdf"
 
 
 export default function PDFViewer(){
@@ -13,7 +14,7 @@ export default function PDFViewer(){
             </div>
 
             <div className="py-6">
-                <iframe src='src/Components/Resume/Tri Resume 2023.pdf' width="100%" height="680px" className="rounded-lg" />
+                <iframe src={Pdf} width="100%" height="680px" className="rounded-lg" />
             </div>
 
         </>
