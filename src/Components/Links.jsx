@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 export default function Links({theme,head,end}){
 
     const rightMotion = {
-        rest: {backgroundColor:"#818181", width: "0", ease: "easeIn",type: "tween", duration: 0.2},
+        rest: {backgroundColor:theme === "dark"? "#ffffff" : "#000000", width: "0", ease: "easeIn",type: "tween", duration: 0.2},
         hover: {
-        backgroundColor: ['hsl(129 129 129)', 'hsl(255 255 255)'],
+        backgroundColor: theme === "dark"? "#ffffff" : "#000000",
           width: "100%",
           transition: {
             duration: 0.2,
@@ -37,8 +37,9 @@ export default function Links({theme,head,end}){
             <div className="w-full mx-4 relative">
             <motion.p  
               variants={rightMotion}
-              className="bg-gray w-full h-[1px]"></motion.p>
-              <p className="bg-gray w-full h-[1px] absolute "></p>
+              className="bg-gray w-full h-[2px] absolute z-20"></motion.p>
+              <p className="bg-gray w-full h-[2px] absolute z-10"></p>
+              <p className="opacity-0 w-full h-[2px] "></p>
             </div>
             <motion.p variants={endMotion} >{end}</motion.p>
         </motion.div>
