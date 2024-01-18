@@ -1,7 +1,25 @@
 import { motion } from "framer-motion"
 import HomeHeader from "./HomeHeader"
+import Links from "../Links"
 
-export default function Home(){
+export default function Home({theme}){
+
+    let where = 
+    [
+        {head: "Linkedin" , ending: "Follow",link: ""},
+        {head: "Youtube" , ending: "Follow",link: ""},
+        {head: "Github" , ending: "Follow",link: ""},
+        {head: "Medium" , ending: "Follow",link: ""},
+    ]
+
+    let whereDisplay = where.map(w => {
+        return(
+            <a target="_blank" href={w.link}>
+                <Links theme={theme} head={w.head} end={w.ending}/>
+            </a>
+        )
+    })
+
     return(
         <>
             <motion.div 
@@ -27,6 +45,10 @@ export default function Home(){
             >
                 <div className="w-full md:w-[30rem] py-6">
                     <HomeHeader />
+                    {/* Put Projects Here */}
+                    <p className="text-lg py-6">Where</p>
+                    {whereDisplay}
+                  
                 </div>
             </motion.div>
 
