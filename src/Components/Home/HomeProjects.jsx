@@ -10,7 +10,7 @@ export default function HomeProjects(){
     return(
         <>
         <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
-        onClick={()=>nav('/projectpage')}
+        onClick={()=>nav('/projects/codehesive')}
         >
             <img src={filler} className="h-14 w-14 rounded-full ml-2" alt="" />
             <div>
@@ -19,7 +19,8 @@ export default function HomeProjects(){
             </div>
             <p className="ml-auto pr-2 opacity-0 group-hover:opacity-80 transition-all"><IoChevronForward size={"2rem"}/></p>
         </div>
-        <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group">
+        <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
+        onClick={()=>nav('/projects/game')}>
             <img src={filler} className="h-14 w-14 rounded-full ml-2" alt="" />
             <div>
                 <p className="group-hover:text-white">Retro Game</p>
@@ -27,8 +28,9 @@ export default function HomeProjects(){
             </div>
             <p className="ml-auto pr-2 opacity-0 group-hover:opacity-80 transition-all"><IoChevronForward size={"2rem"}/></p>
         </div>
-        <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group">
-        <   img src={filler} className="h-14 w-14 rounded-full ml-2" alt="" />
+        <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
+        onClick={()=>nav('/projects/ecommerce')}>
+            <img src={filler} className="h-14 w-14 rounded-full ml-2" alt="" />
             <div>
                 <p className="group-hover:text-white">TriEmulation</p>
                 <p className="text-gray">E-Commerce</p>
