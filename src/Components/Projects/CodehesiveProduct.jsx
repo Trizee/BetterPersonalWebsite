@@ -1,10 +1,19 @@
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
+import Carousel from "./Caro";
 
 export default function CodePage(){
 
     let nav = useNavigate()
+
+    let slides = [
+        "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww",
+        "https://wallpaperaccess.com/full/809523.jpg",
+        "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+      ];
+
 
     return(
         <>
@@ -20,13 +29,9 @@ export default function CodePage(){
         </motion.div>
 
         <div className=" w-full justify-center flex px-4 md:px-0 py-6">
-        <motion.img 
-                className="flex w-full md:w-[38rem] items-center"
-                initial={{scale: 0.2, opacity:0, transition:{duration:0.2}}}
-                animate={{scale: 1, opacity:1,transition:{duration:0.2}}}
-                exit={{scale: 0, opacity:1, transition:{duration:0.2}}}
-                src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww"
-        />
+            <div className="flex w-full md:w-[38rem] items-center">
+                <Carousel slides={slides} />
+            </div>
         </div>
 
         <motion.div 
