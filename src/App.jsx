@@ -10,7 +10,10 @@ import Project from './Components/Projects/Project';
 import Contact from './Components/Contact/Contact';
 import Resume from './Components/Resume/Resume';
 import Stack from './Components/Stack/Stack';
-import ProjectsPage from './Components/Projects/ProjectsPage';
+
+import CodePage from './Components/Projects/CodehesiveProduct';
+import GamePage from './Components/Projects/GameProduct';
+import EcomPage from './Components/Projects/EcomProejct';
 
 import html from "./Components/Icon/html.png"
 import css from "./Components/Icon/css-3.png"
@@ -78,7 +81,9 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />
         <Route path='/stack' element={<Stack stackIcons={stackIcons}/>} />
-        <Route path='/projectpage' element={<ProjectsPage />} />
+        <Route path='/projects/codehesive' element={<CodePage />} />
+        <Route path='/projects/game' element={<GamePage />} />
+        <Route path='/projects/ecommerce' element={<EcomPage />} />
       </Route>
     )
   )

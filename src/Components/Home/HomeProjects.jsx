@@ -22,7 +22,7 @@ export default function HomeProjects(){
         <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group">
             <img src={filler} className="h-14 w-14 rounded-full ml-2" alt="" />
             <div>
-                <p className="group-hover:text-white">Game</p>
+                <p className="group-hover:text-white">Retro Game</p>
                 <p className="text-gray">Python CLI</p>
             </div>
             <p className="ml-auto pr-2 opacity-0 group-hover:opacity-80 transition-all"><IoChevronForward size={"2rem"}/></p>

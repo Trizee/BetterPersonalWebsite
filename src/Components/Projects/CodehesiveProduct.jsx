@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
 
-export default function ProjectsPage(){
+export default function CodePage(){
 
     let nav = useNavigate()
 
