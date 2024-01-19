@@ -21,10 +21,10 @@ export default function ProjectsPage(){
 
         <div className=" w-full justify-center flex px-4 md:px-0 py-6">
         <motion.img 
-                className="flex w-full md:w-[34rem] items-center"
-                initial={{scale: 0, opacity:0, transition:{duration:0.3}}}
-                animate={{scale: 1, opacity:1,transition:{duration:0.3}}}
-                exit={{scale: 0, opacity:1, transition:{duration:0.3}}}
+                className="flex w-full md:w-[38rem] items-center"
+                initial={{scale: 0.2, opacity:0, transition:{duration:0.2}}}
+                animate={{scale: 1, opacity:1,transition:{duration:0.2}}}
+                exit={{scale: 0, opacity:1, transition:{duration:0.2}}}
                 src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww"
         />
         </div>

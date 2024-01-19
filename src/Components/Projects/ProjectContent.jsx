@@ -32,7 +32,7 @@ export default function ProjectContent(){
 
             <div className="col-span-1 w-full py-4">
                 <div className="flex justify-between text-gray pb-2 text-sm ">
-                    <p> Pygame</p>
+                    <p> Python CLI</p>
                     <p> 2023</p>
                 </div>
 
@@ -46,7 +46,7 @@ export default function ProjectContent(){
                     class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                     </div>
                 </div>
-                <p className="pt-2">Python CLI</p>
+                <p className="pt-2">Game</p>
                 </div>
 
             </div>
