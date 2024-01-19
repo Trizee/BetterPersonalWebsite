@@ -21,23 +21,29 @@ export default function HomeStack({stackIcons}){
 
     let display = stackIcons.map(i => {
         return(
-        <a href={i.doc} target="_blank">
+        
+        <div className="flex items center justify-center col-span-1 pt-6 md:pt-0">
         <motion.div 
-        className="h-4 w-4 md:h-8 md:w-8 flex justify-center p-1 items-center cursor-pointer relative" initial="rest" whileHover="hover" animate="rest" key={i.title}>
+        className="h-8 w-8 flex justify-center p-1 items-center cursor-pointer relative" initial="rest" whileHover="hover" animate="rest" key={i.title}>
+            <a href={i.doc} target="_blank">
             <motion.p
             variants={slashMotion}
             className="absolute text-xs -top-7 bg-white rounded-full px-2 text-black">
                     {i.title}
             </motion.p>
             <img src={i.icon} alt="" className="hover:scale-125 transition-all"/>
+            </a>
         </motion.div>
-        </a>
+        </div>
+        
         )
     })
 
     return(
-        <div className="flex gap-3 justify-evenly py-6">
+        
+        <div className="grid grid-cols-6 mx- md:flex  gap-3 md:justify-evenly md:py-6 w-full justify-center ">
             {display}
         </div>
+        
     )
 }
