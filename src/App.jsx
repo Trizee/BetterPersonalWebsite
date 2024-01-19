@@ -10,6 +10,7 @@ import Project from './Components/Projects/Project';
 import Contact from './Components/Contact/Contact';
 import Resume from './Components/Resume/Resume';
 import Stack from './Components/Stack/Stack';
+import ProjectsPage from './Components/Projects/ProjectsPage';
 
 import html from "./Components/Icon/html.png"
 import css from "./Components/Icon/css-3.png"
@@ -21,6 +22,7 @@ import python from "./Components/Icon/python.png"
 import sql from "./Components/Icon/sql-server.png"
 import figma from "./Components/Icon/figma.png"
 import vscode from "./Components/Icon/vscode.png"
+import framer from "./Components/Icon/framer.png"
 
 function App() {
   
@@ -60,7 +62,8 @@ function App() {
     {icon:python,title: "Python",des: "Progamming Language",doc:"https://docs.python.org/3/"},
     {icon:sql,title: "SQL",des: "Backend",doc:"https://developer.mozilla.org/en-US/docs/Glossary/SQL"},
     {icon:figma,title: "Figma",des: "Design Tool",doc:"https://www.figma.com/"},
-    {icon:vscode, title: "VScode",des: "IDE",doc:"https://code.visualstudio.com/"}
+    {icon:vscode, title: "VScode",des: "IDE",doc:"https://code.visualstudio.com/"},
+    {icon:framer, title: "FramerMotion",des: "Animation Libary",doc:"https://www.framer.com/motion/"}
   ]
 
   
@@ -75,6 +78,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />
         <Route path='/stack' element={<Stack stackIcons={stackIcons}/>} />
+        <Route path='/projectpage' element={<ProjectsPage />} />
       </Route>
     )
   )

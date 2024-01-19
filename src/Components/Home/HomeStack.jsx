@@ -36,7 +36,7 @@ export default function HomeStack({stackIcons}){
     })
 
     return(
-        <div className="flex gap-4 justify-evenly py-6">
+        <div className="flex gap-3 justify-evenly py-6">
             {display}
         </div>
     )
