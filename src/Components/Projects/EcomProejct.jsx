@@ -19,6 +19,8 @@ export default function EcomPage(){
                     <p className="rounded-full bg-gray dark:bg-darkGray p-1">
                     <IoChevronBack /></p>Game</p>
                     <p className="w-20  border-[1px] p-1 border-gray text-center rounded-lg mt-6 opacity-70 text-sm">Website</p>
+                    <p className="text-2xl pt-6 font-semibold">TriEmulation</p>
+                    <p className="text-gray py-1 text-xl">E-commerce Storefront</p>
                 </div>
         </motion.div>
 

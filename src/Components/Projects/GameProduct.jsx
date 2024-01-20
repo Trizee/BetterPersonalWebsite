@@ -18,7 +18,9 @@ export default function GamePage(){
                     <p className="pb-6 flex items-center gap-4 cursor-pointer" onClick={()=>nav("/projects")}>
                     <p className="rounded-full bg-gray dark:bg-darkGray p-1">
                     <IoChevronBack /></p>Game</p>
-                    <p className="w-20  border-[1px] p-1 border-gray text-center rounded-lg mt-6 opacity-70 text-sm">Game</p>
+                    <p className="w-20  border-[1px] p-1 border-gray text-center rounded-lg mt-6 opacity-70 text-sm">Website</p>
+                    <p className="text-2xl pt-6 font-semibold">Retro Game</p>
+                    <p className="text-gray py-1 text-xl">Python CLI with Pygame integration</p>
                 </div>
         </motion.div>
 

@@ -22,7 +22,7 @@ export default function Carousel({slides}) {
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${curr * 100}%)` }}
         >
-          {slides.map(s => {return(<img className="flex w-full md:w-[44rem] items-center" src={s} /> 
+          {slides.map(s => {return(<img className="flex w-full items-center" src={s} /> 
           )})}
         </div>
         <div className="absolute inset-0 flex items-center justify-between p-4">
