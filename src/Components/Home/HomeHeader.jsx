@@ -53,7 +53,7 @@ export default function HomeHeader(){
             {quote}
         </motion.p>
         </p>
-        <p className="text-xl text-space dark:text-gray">I'm Tri Hoang, a passionate Software Engineer living in Denver, Colorado. Always striving to learn and improve. </p>
+        <p className="text-xl text-space dark:text-gray">I'm Tri Hoang, a Software Engineer living in Denver, Colorado. Always striving to learn and improve. </p>
 
         <div className="py-6 flex items-center gap-4">
                 <p className="h-2 w-2 bg-green rounded-full"></p>

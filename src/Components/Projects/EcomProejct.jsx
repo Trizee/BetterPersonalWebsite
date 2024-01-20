@@ -14,8 +14,11 @@ export default function EcomPage(){
                 animate={{y: 0, opacity:1}}
                 exit={{x: window.innerWidth, opacity:1, transition:{duration:0.4}}}
                 >
-                <div className="w-full md:w-[30rem] items-center cursor-pointer " onClick={()=>nav("/projects")}>
-                    <p className="pb-6 flex items-center gap-4"> <p className="rounded-full bg-gray dark:bg-darkGray p-1"><IoChevronBack /></p> Projects</p>
+                <div className="w-full md:w-[30rem] items-center  " >
+                    <p className="pb-6 flex items-center gap-4 cursor-pointer" onClick={()=>nav("/projects")}>
+                    <p className="rounded-full bg-gray dark:bg-darkGray p-1">
+                    <IoChevronBack /></p>Game</p>
+                    <p className="w-20  border-[1px] p-1 border-gray text-center rounded-lg mt-6 opacity-70 text-sm">Website</p>
                 </div>
         </motion.div>
 
