@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
+import ProjectLinks from "./ProjectLinks";
 
 export default function EcomPage(){
 
@@ -42,6 +43,7 @@ export default function EcomPage(){
             >
                 <div className="w-full md:w-[30rem] py-6 text-black dark:text-white">
                     {/* Content Here */}
+                    <ProjectLinks git={"https://github.com/Trizee/phase-2-project"} you={'https://www.youtube.com/watch?v=tneO4KbpzTM'}/>
                 </div>
         </motion.div>
         </>

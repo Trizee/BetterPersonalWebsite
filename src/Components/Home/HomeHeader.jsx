@@ -56,7 +56,7 @@ export default function HomeHeader(){
         <p className="text-xl text-space dark:text-gray">I'm Tri Hoang, a Software Engineer living in Denver, Colorado. Always striving to learn and improve. </p>
 
         <div className="py-6 flex items-center gap-4">
-                <p className="h-2 w-2 bg-green rounded-full"></p>
+                <p className="h-2 w-2 bg-green rounded-full animate-pulse"></p>
                 <p className="text-sm text-space dark:text-gray">Available for new opportunities</p>
         </div>
 
