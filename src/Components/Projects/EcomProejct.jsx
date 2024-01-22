@@ -61,6 +61,17 @@ export default function EcomPage(){
                     <ProjectLinks git={"https://github.com/Trizee/phase-2-project"} you={'https://www.youtube.com/watch?v=tneO4KbpzTM'}/>
                     <p className="w-full h-[1px] bg-lightGray mt-10 mb-2"></p>
 
+                    <p className="text-lg">TriEmulation is a website made to sell portable gaming devices made to replicate a frontend for an E-commerce site</p>
+                    <p className="py-4">Includes the following features:</p>
+                    <ol className="text-sm list-disc text-gray  px-4">
+                        <li>Formulated frontend styling with Bootstrap to make a consistently themed and mobile responsive website</li>
+                        <li>Created a review section with live updates for the user to share their experience with other customers</li>
+                        <li>Established cart page with dynamic rendering based on customer’s input with React Router</li>
+                    </ol>
+                    <p className="text-gray py-4">And Much More</p>
+
+                    <p className="w-full h-[1px] bg-lightGray mt-10 mb-2 opacity-70"></p>
+
                     <ProjectStack stack={stack}/>
                     <p className="text-xl ml-1 py-2 font-semibold">More Projects</p>
                     <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"

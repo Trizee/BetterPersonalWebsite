@@ -63,6 +63,18 @@ export default function GamePage(){
 
                     <p className="w-full h-[1px] bg-lightGray mt-10 mb-2"></p>
 
+                    <p className="text-lg">Command line program with a game incorporated and interactive scoring functionality</p>
+                    <p className="py-4">Includes the following features:</p>
+                    <ol className="text-sm list-disc text-gray  px-4">
+                        <li>Created CLI with Inquirer for keyboard functionality making it easier to interact with the program</li>
+                        <li>Devised methods to keep track of score for players to keep track their own scores and view overall highscores</li>
+                        <li>Combined CLI with a side scrolling game built with Pygame to have the game interact with a SQLAlchemy backend</li>
+                        <li>Empowered user with full CRUD functionality through user inputs in the CLI </li>
+                    </ol>
+                    <p className="text-gray py-4">And Much More</p>
+
+                    <p className="w-full h-[1px] bg-lightGray mt-10 mb-2 opacity-70"></p>
+
                     <ProjectStack stack={stack}/>
                     <p className="text-xl ml-1 py-2 font-semibold">More Projects</p>
                     <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"

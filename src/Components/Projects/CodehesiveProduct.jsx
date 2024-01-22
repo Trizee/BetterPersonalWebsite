@@ -74,7 +74,18 @@ export default function CodePage(){
                     <ProjectLinks you={"https://www.youtube.com/watch?v=jCIInz3PokY"} git={"https://github.com/Trizee/Tri-Phase-5"}/>
                     <p className="w-full h-[1px] bg-lightGray mt-10 mb-2 opacity-70"></p>
                     
-                    
+                    <p className="text-lg">Codehesive is a collaborative code editor for frontend development that includes live coding, version control and forking feature </p>
+                    <p className="py-4">Includes the following features:</p>
+                    <ol className="text-sm list-disc text-gray  px-4">
+                        <li>Incorporated signup/login with validation using ByCrypt for a secure user experience</li>
+                        <li>Built easy to use code editor with Monaco for dynamic live rendering and an enhanced developer experience</li>
+                        <li>Streamlined database to have easily accessible data for pulling information using Flask and RESTful API</li>
+                        <li>Succeeded in creating a peer to peer room to have users collaborate in the code editor with WebRTC</li>
+                    </ol>
+                    <p className="text-gray py-4">And Much More</p>
+
+                    <p className="w-full h-[1px] bg-lightGray mt-10 mb-2 opacity-70"></p>
+
                     <ProjectStack stack={stack}/>
                     <p className="text-xl ml-1 py-2 font-semibold">More Projects</p>
                     <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
