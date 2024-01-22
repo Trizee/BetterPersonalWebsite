@@ -2,16 +2,25 @@ import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
 import ProjectLinks from "./ProjectLinks";
+import ProjectStack from "./ProjectStack";
 
 import { IoChevronForward } from "react-icons/io5";
 
 import code from "../Home/codehesive.svg"
-import game from "../Home/game.svg"
 import jump from "../Home/jump.png"
 
 export default function EcomPage(){
 
     let nav = useNavigate()
+
+    let stack = [
+        "React",
+        "BootStrapCSS",
+        "MaterialUI",
+        "JSON", 
+        "React-Router",
+        "Vite"
+    ]
 
     return(
         <>
@@ -52,7 +61,7 @@ export default function EcomPage(){
                     <ProjectLinks git={"https://github.com/Trizee/phase-2-project"} you={'https://www.youtube.com/watch?v=tneO4KbpzTM'}/>
                     <p className="w-full h-[1px] bg-lightGray mt-10 mb-2"></p>
 
-
+                    <ProjectStack stack={stack}/>
                     <p className="text-xl ml-1 py-2 font-semibold">More Projects</p>
                     <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
                     onClick={()=>nav('/projects/ecommerce')}
