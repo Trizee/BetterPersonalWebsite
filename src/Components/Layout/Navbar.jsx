@@ -27,8 +27,6 @@ export default function Navbar({handleClick,theme}){
         setPage(location.pathname)
     },[location])
 
-    console.log(page)
-
     let iconSize = "1.5rem" 
 
     let icons = [

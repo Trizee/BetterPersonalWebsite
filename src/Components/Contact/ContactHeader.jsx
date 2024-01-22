@@ -58,7 +58,7 @@ export default function ContactHeader(){
             </a>
         </div>
 
-        <p className="w-full h-[1px] bg-lightGray mt-10 mb-2"></p>
+        <p className="w-full h-[1px] bg-lightGray mt-10 mb-2 opacity-70"></p>
            
         </>
     )

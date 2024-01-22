@@ -3,8 +3,13 @@ import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
 import Carousel from "./Caro";
 
+import { IoChevronForward } from "react-icons/io5";
+
 import ProjectLinks from "./ProjectLinks";
 
+import code from "../Home/codehesive.svg"
+import game from "../Home/game.svg"
+import jump from "../Home/jump.png"
 
 
 export default function CodePage(){
@@ -52,6 +57,30 @@ export default function CodePage(){
                 <div className="w-full md:w-[30rem] py-6 text-black dark:text-white">
                     {/* Content Here */}
                     <ProjectLinks you={"https://www.youtube.com/watch?v=jCIInz3PokY"} git={"https://github.com/Trizee/Tri-Phase-5"}/>
+                    <p className="w-full h-[1px] bg-lightGray mt-10 mb-2 opacity-70"></p>
+                    
+                    
+                    
+                    <p className="text-xl ml-1 py-2 font-semibold">More Projects</p>
+                    <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
+                    onClick={()=>nav('/projects/ecommerce')}
+                    >
+                        <img src={game} className="h-14 w-14 rounded-full p-2 bg-darkGray ml-1" alt="Codehesive Icon" />
+                        <div>
+                            <p className="group-hover:text-white">TriEmulation</p>
+                            <p className="text-gray">ECommerce Storefront</p>
+                        </div>
+                        <p className="ml-auto pr-2 opacity-0 group-hover:opacity-80 transition-all"><IoChevronForward size={"2rem"}/></p>
+                    </div>
+                    <div className="w-full h-[4.5rem] rounded-lg hover:bg-lightGray transition-all duration-300 cursor-pointer mb-1 flex items-center gap-4 group"
+                    onClick={()=>nav('/projects/game')}>
+                        <img src={jump} className="h-14 w-14 rounded-full p-2 bg-darkGray ml-1" alt="Game Icon" />
+                        <div>
+                            <p className="group-hover:text-white">Retro Game</p>
+                            <p className="text-gray">Python CLI</p>
+                        </div>
+                        <p className="ml-auto pr-2 opacity-0 group-hover:opacity-80 transition-all"><IoChevronForward size={"2rem"}/></p>
+                    </div>
                 </div>
         </motion.div>
         </>

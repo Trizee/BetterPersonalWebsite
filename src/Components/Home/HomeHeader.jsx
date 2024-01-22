@@ -32,13 +32,6 @@ export default function HomeHeader(){
         return () => clearInterval(interval);
       }, [index]);
 
-      
-    //   <div className="my-6 h-9 w-40 rounded-lg bg-darkGray flex items-center justify-evenly cursor-pointer text-white hover:bg-lightGray transition-all">
-    //                         <AiOutlineFile size={"1.12rem"}/>
-    //                         <p>View Resume</p>
-    //                     </div>
-
-
     return(
         <>
         <p className="text-3xl text-darkGray dark:text-gray py-8 flex">

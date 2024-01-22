@@ -9,7 +9,7 @@ export default function PDFViewer(){
         <>
             <p className="py-6 text-2xl text-gray">Always ready for new <span className="text-black dark:text-white">opportunites.</span></p>
 
-            <p className="bg-gray w-full h-[1px] my-6"></p>
+            <p className="bg-gray w-full h-[1px] my-6 opacity-70"></p>
             <div className="flex items-center justify-between">
             </div>
 
