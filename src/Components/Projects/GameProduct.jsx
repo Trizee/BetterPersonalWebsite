@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
 import ProjectLinks from "./ProjectLinks";
+import Carousel from "./Caro";
 import ProjectStack from "./ProjectStack";
 
 import { IoChevronForward } from "react-icons/io5";
@@ -9,10 +10,19 @@ import { IoChevronForward } from "react-icons/io5";
 import code from "../Home/codehesive.svg"
 import game from "../Home/game.svg"
 
+import game1 from "./Pictures/game1.png"
+import game2 from "./Pictures/game2.png"
+import game3 from "./Pictures/game3.png"
+import game4 from "./Pictures/game4.png"
+import game5 from "./Pictures/game5.png"
+import game6 from "./Pictures/game6.png"
+
 
 export default function GamePage(){
 
     let nav = useNavigate()
+
+    let slides = [game1,game2,game3,game4,game5,game6]
 
     let stack = [
         "Python",
@@ -42,13 +52,9 @@ export default function GamePage(){
         </motion.div>
 
         <div className=" w-full justify-center flex px-4 md:px-0 py-6">
-        <motion.img 
-                className="flex w-full md:w-[38rem] items-center"
-                initial={{scale: 0.2, opacity:0, transition:{duration:0.2}}}
-                animate={{scale: 1, opacity:1,transition:{duration:0.2}}}
-                exit={{scale: 0, opacity:1, transition:{duration:0.2}}}
-                src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww"
-        />
+            <div className="flex w-full md:w-[44rem] items-center">
+                <Carousel slides={slides} />
+            </div>
         </div>
 
         <motion.div 

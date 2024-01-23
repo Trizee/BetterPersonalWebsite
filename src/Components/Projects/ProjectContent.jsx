@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom"
 
 import ecom1 from "./Pictures/ecom1.png"
+import code1 from "./Pictures/code1.png"
+import game1 from "./Pictures/game1.png"
 
 export default function ProjectContent(){
 
     let nav = useNavigate()
-
-    let filler = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww"
 
     return(
         <div className="grid grid-cols-2 w-full gap-4">
@@ -22,7 +22,7 @@ export default function ProjectContent(){
                 class="relative  overflow-hidden bg-cover bg-no-repeat"
                 data-te-ripple-init
                 data-te-ripple-color="light">
-                    <img src={filler} alt=""/>
+                    <img src={code1} alt="codehesiveIcon"/>
                     <div
                     class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                     </div>
@@ -43,7 +43,7 @@ export default function ProjectContent(){
                 class="relative  overflow-hidden bg-cover bg-no-repeat"
                 data-te-ripple-init
                 data-te-ripple-color="light">
-                    <img src={filler} alt=""/>
+                    <img src={game1} alt="Game Icon"/>
                     <div
                     class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                     </div>

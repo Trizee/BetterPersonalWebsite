@@ -11,17 +11,19 @@ import ProjectStack from "./ProjectStack";
 import game from "../Home/game.svg"
 import jump from "../Home/jump.png"
 
+import code1 from "./Pictures/code1.png"
+import code2 from "./Pictures/code2.png"
+import code3 from "./Pictures/code3.png"
+import code4 from "./Pictures/code4.png"
+import code5 from "./Pictures/code5.png"
+import code6 from "./Pictures/code6.png"
+
 
 export default function CodePage(){
 
     let nav = useNavigate()
 
-    let slides = [
-        "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww",
-        "https://wallpaperaccess.com/full/809523.jpg",
-        "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
-      ];
+    let slides = [code1,code2,code3,code4,code5,code6];
 
     let stack = [
         "React",
