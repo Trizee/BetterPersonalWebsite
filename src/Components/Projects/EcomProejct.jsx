@@ -3,11 +3,19 @@ import { useNavigate } from "react-router-dom"
 import { IoChevronBack } from "react-icons/io5";
 import ProjectLinks from "./ProjectLinks";
 import ProjectStack from "./ProjectStack";
+import Carousel from "./Caro";
 
 import { IoChevronForward } from "react-icons/io5";
 
 import code from "../Home/codehesive.svg"
 import jump from "../Home/jump.png"
+
+import ecom1 from "./Pictures/ecom1.png"
+import ecom2 from "./Pictures/ecom2.png"
+import ecom3 from "./Pictures/ecom3.png"
+import ecom4 from "./Pictures/ecom4.png"
+import ecom5 from "./Pictures/ecom5.png"
+import ecom6 from "./Pictures/ecom6.png"
 
 export default function EcomPage(){
 
@@ -20,6 +28,10 @@ export default function EcomPage(){
         "JSON", 
         "React-Router",
         "Vite"
+    ]
+
+    let slides = [
+        ecom1,ecom2,ecom3,ecom4,ecom5,ecom6
     ]
 
     return(
@@ -41,13 +53,9 @@ export default function EcomPage(){
         </motion.div>
 
         <div className=" w-full justify-center flex px-4 md:px-0 py-6">
-        <motion.img 
-                className="flex w-full md:w-[38rem] items-center"
-                initial={{scale: 0.2, opacity:0, transition:{duration:0.2}}}
-                animate={{scale: 1, opacity:1,transition:{duration:0.2}}}
-                exit={{scale: 0, opacity:1, transition:{duration:0.2}}}
-                src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fHww"
-        />
+            <div className="flex w-full md:w-[44rem] items-center">
+                <Carousel slides={slides} />
+            </div>
         </div>
 
         <motion.div 
