@@ -1,7 +1,10 @@
-import { useState } from "react"
+import { useState,useRef } from "react"
 import { SlClock } from "react-icons/sl";
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm(){
+
+    const form = useRef();
 
     let [name,setName] = useState("")
     let [email,setEmail] = useState("")
@@ -9,17 +12,23 @@ export default function ContactForm(){
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        alert(`The name you entered was: ${name}`)
+        emailjs.sendForm('service_dfab1vk', 'template_i49sm7k', form.current, '-0Q8mWoe1ShBLyNqa')
+        .then((result) => {
+            alert(`Thank You For The Submition`)
             setName("")
             setEmail("")
-            setMessage("")
+            setMessage("");
+        }, (error) => {
+        alert('Something went wrong');})
     }
 
     return(
-        <form action="submit" onSubmit={handleSubmit}>
+        <form ref={form} action="submit" onSubmit={handleSubmit}>
             <div className="flex gap-3 pt-4">
              
                     <input
+                    name="user_name"
+                    required
                     type="text" 
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -29,7 +38,9 @@ export default function ContactForm(){
                 
                 
                     <input
-                    type="text" 
+                    name="user_email"
+                    required
+                    type="email" 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="h-9 w-1/2 bg-lightGray rounded-lg px-3 text-white"
@@ -39,6 +50,8 @@ export default function ContactForm(){
             </div>
 
             <textarea
+                    name="message"
+                    required
                     type="text" 
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
