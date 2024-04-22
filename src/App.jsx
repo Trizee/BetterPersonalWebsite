@@ -59,7 +59,7 @@ function App() {
     {icon:html, title: "HTML" ,des: "Frontend",doc:"https://developer.mozilla.org/en-US/docs/Web/HTML"},
     {icon:css, title: "CSS",des: "Frontend",doc:"https://developer.mozilla.org/en-US/docs/Web/CSS"},
     {icon:js, title: "JavaScript",des: "Progamming Language",doc:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
-    {icon:reactIcon, title: "React",des: "JavaScript Framwork",doc:"https://react.dev/"},
+    {icon:reactIcon, title: "React",des: "JavaScript Framework",doc:"https://react.dev/"},
     {icon:tailwind, title: "TailwindCSS",des: "CSS Framework",doc:"https://tailwindcss.com/"},
     {icon:bootstrap,title: "BootStrap",des: "CSS Framework",doc:"https://getbootstrap.com/"},
     {icon:python,title: "Python",des: "Progamming Language",doc:"https://docs.python.org/3/"},
